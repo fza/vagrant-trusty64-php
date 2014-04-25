@@ -1,0 +1,18 @@
+set /files/etc/php5/fpm/php.ini/PHP/error_reporting -1
+set /files/etc/php5/fpm/php.ini/PHP/display_errors On
+set /files/etc/php5/fpm/php.ini/PHP/memory_limit 256M
+set /files/etc/php5/fpm/php.ini/PHP/post_max_size 32M
+set /files/etc/php5/fpm/php.ini/PHP/upload_max_filesize 32M
+
+set /files/etc/php5/cli/php.ini/PHP/error_reporting -1
+set /files/etc/php5/cli/php.ini/PHP/display_errors On
+set /files/etc/php5/cli/php.ini/PHP/memory_limit 256M
+
+set /files/etc/php5/mods-available/xdebug.ini/xdebug/default_enable 1
+set /files/etc/php5/mods-available/xdebug.ini/xdebug/remote_autostart 0
+set /files/etc/php5/mods-available/xdebug.ini/xdebug/remote_connect_back 1
+set /files/etc/php5/mods-available/xdebug.ini/xdebug/remote_enable 1
+set /files/etc/php5/mods-available/xdebug.ini/xdebug/remote_handler dbgp
+set /files/etc/php5/mods-available/xdebug.ini/xdebug/remote_port 9000
+
+save
