@@ -48,7 +48,7 @@ Create a self-signed certificate (Google is your friend). Name the files `server
 
 ### Repackaging
 
-Please follow e.g. [this guide](http://abhishek-tiwari.com/hacking/creating-a-new-vagrant-base-box-from-an-existing-vm).
+The `vagrant package` command is not able to handle parallels provided boxes yet (as with v1.5.4). My trick is to use [Veewee](https://github.com/jedi4ever/veewee), adding a fake box definition, renaming the provisioned VM within Parallels the same as the fake definition and running `veewee parallels export <put-definition-name-here>` from Veewee's main directory. This will produce a `.box` file, which can then be imported in Vagrant: `vagrant box add --name <desired-box-name> <put-definition-name-here>.box`
 
 ### Contribution
 
