@@ -52,9 +52,15 @@ Xdebug is per default configured to connect back on port 9000.
 
 The `vagrant package` command is not able to handle parallels provided boxes yet (as with v1.5.4). My trick is to use [Veewee](https://github.com/jedi4ever/veewee), adding a fake box definition, renaming the provisioned VM within Parallels the same as the fake definition and running `veewee parallels export <put-definition-name-here>` from Veewee's main directory. This will produce a `.box` file, which can then be imported in Vagrant: `vagrant box add --name <desired-box-name> <put-definition-name-here>.box`
 
-## Why not using PuPHPet or similar?
+### Why not using PuPHPet or similar?
 
 *This is my opinion:* I think these are overblown. Clicking things together is easy, but most times I tried PuPHPet the provisioning process was broken. They have a complex Puppet definition which doesn't seem to be tested well. So why not make things easier? :-)
+
+### Roadmap
+
+* Add simple configuration file using yaml or something
+* Make it possible to configure everything in the Vagrantfile
+* Add almost similar feature set as PuPHPet has, but drastically more stable.
 
 ### Thanks
 
