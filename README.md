@@ -13,8 +13,6 @@ This box is meant to be used for pre-provisioning, as I like my VMs to be ready 
 * Includes some dotfiles (mainly `.bash-aliases`)
 * SSL-ready
 
-Thanks to [Ondřej Surý](https://launchpad.net/~ondrej) and [Chris Lea](https://launchpad.net/~chris-lea) for their awesome PPAs!
-
 ### PHP modules
 
 * (defaults)
@@ -57,6 +55,10 @@ The `vagrant package` command is not able to handle parallels provided boxes yet
 ## Why not using PuPHPet or similar?
 
 *This is my opinion:* I think these are overblown. Clicking things together is easy, but most times I tried PuPHPet the provisioning process was broken. They have a complex Puppet definition which doesn't seem to be tested well. So why not make things easier? :-)
+
+### Thanks
+
+Thanks to [Ondřej Surý](https://launchpad.net/~ondrej) and [Chris Lea](https://launchpad.net/~chris-lea) for their awesome PPAs!
 
 ### Contribution
 
