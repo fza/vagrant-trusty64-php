@@ -30,3 +30,11 @@ Temporary Items
 #
 
 .vagrant/
+
+
+#
+# Project specifiv
+#
+
+files/ssl/*
+files/ssh/*
