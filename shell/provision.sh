@@ -20,6 +20,7 @@ apt-get -y update >/dev/null
 
 echo "Adding PPAs"
 apt-get -y install software-properties-common python-software-properties git curl augeas-tools augeas-lenses >/dev/null 2>/dev/null
+add-apt-repository ppa:george-edison55/openssl-heartbleed-fix >/dev/null 2>/dev/null
 add-apt-repository ppa:ondrej/php5 >/dev/null 2>/dev/null
 add-apt-repository ppa:ondrej/nginx >/dev/null 2>/dev/null
 add-apt-repository ppa:ondrej/mariadb-5.5 >/dev/null 2>/dev/null
