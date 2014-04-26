@@ -1,8 +1,8 @@
-## Trusty64 / Parallels box with nginx/PHP5 for pre-provisioning
+## Vagrant PHP5/nginx web stack
 
-Uses this lightweight [Trusty64/Parallels Veewee box](https://github.com/fza/veewee-trusty64-parallels). The box will be automatically downloaded from [Vagrant Cloud](https://vagrantcloud.com/fza/trusty64). May work with other trusty64 base boxes, too (untested).
+Uses a lightweight [trusty64/Parallels box](https://github.com/fza/veewee-trusty64-parallels). The box will be automatically downloaded from [Vagrant Cloud](https://vagrantcloud.com/fza/trusty64). May work with other trusty64 base boxes, too (untested).
 
-This box is meant to be used for pre-provisioning, as I like my VMs to be ready just when I need them. Waiting for provisioning to be done s***.
+This box is meant to be used for pre-provisioning, as I like my VMs to be ready just when I need them. Waiting for the provisioning process to be done s***.
 
 ### Spec
 
@@ -46,9 +46,17 @@ Thanks to [Ondřej Surý](https://launchpad.net/~ondrej) and [Chris Lea](https:/
 
 Create a self-signed certificate (Google is your friend). Name the files `server.crt` and `server.key`. Save them in the `files/ssl` directory. Run `vagrant up`, respectively `vagrant provision`. Done. You may use a Vagrant DNS plugin (like [landrush](https://github.com/phinze/landrush)) if you don't want to mess up your `/etc/hosts`.
 
+### Xdebug
+
+Xdebug is per default configured to connect back on port 9000.
+
 ### Repackaging
 
 The `vagrant package` command is not able to handle parallels provided boxes yet (as with v1.5.4). My trick is to use [Veewee](https://github.com/jedi4ever/veewee), adding a fake box definition, renaming the provisioned VM within Parallels the same as the fake definition and running `veewee parallels export <put-definition-name-here>` from Veewee's main directory. This will produce a `.box` file, which can then be imported in Vagrant: `vagrant box add --name <desired-box-name> <put-definition-name-here>.box`
+
+## Why not using PuPHPet or similar?
+
+*This is my opinion:* I think these are overblown. Clicking things together is easy, but most times I tried PuPHPet the provisioning process was broken. They have a complex Puppet definition which doesn't seem to be tested well. So why not make things easier? :-)
 
 ### Contribution
 
