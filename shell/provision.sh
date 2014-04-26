@@ -153,7 +153,7 @@ if [ -z "`gem list | grep mailcatcher`" ]; then
     apt-get -y install nullmailer >/dev/null 2>/dev/null
 
     echo "Configuring nullmailer"
-    echo "127.0.0.1 smtp" > /etc/nullmailer/remotes
+    echo "127.0.0.1 smtp --port=1025" > /etc/nullmailer/remotes
 fi
 
 echo "Updating gems"
