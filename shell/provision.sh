@@ -140,6 +140,7 @@ apt-get -y install mariadb-server >/dev/null 2>/dev/null
 echo "Configuring MariaDB"
 $AUGTOOL -f $AUGCONF_DIR/mysql.augconf >/dev/null
 service mysql restart >/dev/null
+mysql -u root -e "GRANT ALL ON *.* TO 'root'@'' WITH GRANT OPTION; FLUSH PRIVILEGES"
 
 if [ -z "`gem list | grep mailcatcher`" ]; then
     echo "Installing Mailcatcher"
