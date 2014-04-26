@@ -132,6 +132,7 @@ else
     echo "No SSL certificates found -> not enabling SSL"
     echo "" > /etc/nginx/ssl_config
 fi
+$AUGTOOL -f $AUGCONF_DIR/nginx.augconf >/dev/null
 service nginx restart >/dev/null
 
 echo "Installing MariaDB"
