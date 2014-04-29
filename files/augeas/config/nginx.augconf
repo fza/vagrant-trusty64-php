@@ -1,4 +1,5 @@
 set /files/etc/nginx/nginx.conf/http/fastcgi_buffers '32 32k'
 set /files/etc/nginx/nginx.conf/http/fastcgi_buffer_size 32k
+set /files/etc/nginx/nginx.conf/http/fastcgi_read_timeout 3600s
 
 save
