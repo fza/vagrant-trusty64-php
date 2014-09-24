@@ -8,16 +8,15 @@ set /files/etc/php5/cli/php.ini/PHP/error_reporting -1
 set /files/etc/php5/cli/php.ini/PHP/display_errors On
 set /files/etc/php5/cli/php.ini/PHP/memory_limit 256M
 
-set /files/etc/php5/mods-available/xdebug.ini/xdebug/xdebug.default_enable=1
-set /files/etc/php5/mods-available/xdebug.ini/xdebug/xdebug.profiler_enable=0
-set /files/etc/php5/mods-available/xdebug.ini/xdebug/xdebug.profiler_enable_trigger=1
-set /files/etc/php5/mods-available/xdebug.ini/xdebug/xdebug.profiler_output_dir=/vagrant/.profiler
-set /files/etc/php5/mods-available/xdebug.ini/xdebug/xdebug.profiler_output_name=%R.%u.xdebug.profile
-set /files/etc/php5/mods-available/xdebug.ini/xdebug/xdebug.trace_enable_trigger=1
-set /files/etc/php5/mods-available/xdebug.ini/xdebug/xdebug.trace_format=0
-set /files/etc/php5/mods-available/xdebug.ini/xdebug/xdebug.trace_output_dir=/vagrant/.trace
-set /files/etc/php5/mods-available/xdebug.ini/xdebug/xdebug.trace_output_name=%R.%u.xdebug.trace
 set /files/etc/php5/mods-available/xdebug.ini/xdebug/xdebug.default_enable 1
+set /files/etc/php5/mods-available/xdebug.ini/xdebug/xdebug.profiler_enable 0
+set /files/etc/php5/mods-available/xdebug.ini/xdebug/xdebug.profiler_enable_trigger 1
+set /files/etc/php5/mods-available/xdebug.ini/xdebug/xdebug.profiler_output_dir /vagrant/.profiler
+set /files/etc/php5/mods-available/xdebug.ini/xdebug/xdebug.profiler_output_name %R.%u.xdebug.profile
+set /files/etc/php5/mods-available/xdebug.ini/xdebug/xdebug.trace_enable_trigger 1
+set /files/etc/php5/mods-available/xdebug.ini/xdebug/xdebug.trace_format 0
+set /files/etc/php5/mods-available/xdebug.ini/xdebug/xdebug.trace_output_dir /vagrant/.trace
+set /files/etc/php5/mods-available/xdebug.ini/xdebug/xdebug.trace_output_name %R.%u.xdebug.trace
 set /files/etc/php5/mods-available/xdebug.ini/xdebug/xdebug.remote_autostart 0
 set /files/etc/php5/mods-available/xdebug.ini/xdebug/xdebug.remote_connect_back 1
 set /files/etc/php5/mods-available/xdebug.ini/xdebug/xdebug.remote_enable 1
