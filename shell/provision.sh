@@ -5,7 +5,7 @@ AUGLENS_DIR="${PROVISION_SRC_DIR}/files/augeas/lenses"
 AUGCONF_DIR="${PROVISION_SRC_DIR}/files/augeas/config"
 AUGTOOL="augtool -I ${AUGLENS_DIR}"
 PHP5_MOD_CONF_DIR="/etc/php5/mods-available"
-RUBY_VERSION="2.1.1"
+RUBY_VERSION="2.1.3"
 IN_SUBSHELL=0
 HAVE_SSL=0
 
