@@ -42,15 +42,15 @@ This box is meant to be used for pre-provisioning, as I like my VMs to be ready 
 
 ### SSL support
 
-Create a self-signed certificate (Google is your friend). Name the files `server.crt` and `server.key`. Save them in the `files/ssl` directory. Run `vagrant up`, respectively `vagrant provision`. Done. You may use a Vagrant DNS plugin (like [landrush](https://github.com/phinze/landrush)) if you don't want to mess up your `/etc/hosts`.
+Create a self-signed certificate (Google is your friend). Name the files `server.crt` and `server.key`. Save them in the `files/ssl` directory. Run `vagrant up`, respectively `vagrant provision`. Done. You may want to use a Vagrant DNS plugin (like [landrush](https://github.com/phinze/landrush)) if you don't want to mess up your `/etc/hosts`.
 
 ### Xdebug
 
-Xdebug is per default configured to connect back on port 9000.
+Per default Xdebug is configured to connect back on port 9000.
 
 ### Repackaging
 
-The `vagrant package` command is not able to handle parallels provided boxes yet (as with v1.5.4). My trick is to use [Veewee](https://github.com/jedi4ever/veewee), adding a fake box definition, renaming the provisioned VM within Parallels the same as the fake definition and running `veewee parallels export <put-definition-name-here>` from Veewee's main directory. This will produce a `.box` file, which can then be imported in Vagrant: `vagrant box add --name <desired-box-name> <put-definition-name-here>.box`
+Make sure you have the latest Vagrant release, then simply run `vagrant package` and re-import the resulting `.box` file with `vagrant box add --name <box-name> <filename>.box`.
 
 ### Roadmap
 
