@@ -8,8 +8,8 @@ This box is meant to be used for pre-provisioning, as I like my VMs to be ready 
 
 * Uses shell provisioning only
 * No Chef, no Puppet
-* Uses [RVM](http://rvm.io/) to set up Ruby (currently 2.1.1) as default
-* Installs PHP5, nginx, Mailcatcher, nullmailer, MariaDB, Redis, composer, Grunt.
+* Uses [RVM](http://rvm.io/) to set up Ruby (currently 2.1.3) as default
+* Installs PHP5.6, nginx, Mailcatcher, nullmailer, MariaDB, Redis, composer, Grunt.
 * Includes some dotfiles (mainly `.bash-aliases`)
 * SSL-ready
 
@@ -51,10 +51,6 @@ Xdebug is per default configured to connect back on port 9000.
 ### Repackaging
 
 The `vagrant package` command is not able to handle parallels provided boxes yet (as with v1.5.4). My trick is to use [Veewee](https://github.com/jedi4ever/veewee), adding a fake box definition, renaming the provisioned VM within Parallels the same as the fake definition and running `veewee parallels export <put-definition-name-here>` from Veewee's main directory. This will produce a `.box` file, which can then be imported in Vagrant: `vagrant box add --name <desired-box-name> <put-definition-name-here>.box`
-
-### Why not using PuPHPet or similar?
-
-*This is my opinion:* I think these are overblown. Clicking things together is easy, but most times I tried PuPHPet the provisioning process was broken. They have a complex Puppet definition which doesn't seem to be tested well. So why not make things easier? :-)
 
 ### Roadmap
 
